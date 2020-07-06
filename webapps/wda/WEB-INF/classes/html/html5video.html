@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<title>视频预览</title>
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
+<link rel="stylesheet" type="text/css" href="/wda/css/wdacontent.css" />
+<script type="text/javascript" src="/wda/lib/flexpaper/js/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/wda/lib/html5video/html5media.min.js"></script>
+</head>
+<body>
+	<div class="wdaTitleBox">
+		<img src="/wda/img/htmllogo.png" />
+	</div>
+	<div class="wdahtmlbox" style="background-color: #000;">
+		<video id="documentViewer" src="VIDEO_SWF_PATH" width="100%" controls
+			preload></video>
+	</div>
+</body>
+<script type="text/javascript">
+	$(function() {
+		$('#documentViewer').css('height', $(window).height() - 200);
+	});
+</script>
+</html>

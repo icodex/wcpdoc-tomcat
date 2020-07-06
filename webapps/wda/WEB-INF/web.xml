@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <el-ignored>false</el-ignored>
+      <page-encoding>utf-8</page-encoding>
+    </jsp-property-group>
+  </jsp-config>
+  <filter>
+    <filter-name>Filter_Encoding</filter-name>
+    <filter-class>com.farm.wda.web.filter.FilterEncoding</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Filter_Encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+   <filter>
+    <filter-name>Filter_auth</filter-name>
+    <filter-class>com.farm.wda.web.filter.FilterAuthValid</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Filter_auth</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>SysInit</servlet-name>
+    <servlet-class>com.farm.wda.web.servlet.SysInit</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 预览视图 -->
+  <servlet>
+    <description></description>
+    <display-name>FileViewServlet</display-name>
+    <servlet-name>FileViewServlet</servlet-name>
+    <servlet-class>com.farm.wda.web.servlet.FileViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FileViewServlet</servlet-name>
+    <url-pattern>/view.do</url-pattern>
+  </servlet-mapping>
+  <!-- 生成预览文件 -->
+  <servlet>
+    <description></description>
+    <display-name>FileGenerateServlet</display-name>
+    <servlet-name>FileGenerateServlet</servlet-name>
+    <servlet-class>com.farm.wda.web.servlet.FileGenerateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FileGenerateServlet</servlet-name>
+    <url-pattern>/generate.do</url-pattern>
+  </servlet-mapping>
+   <!-- 日志视图 -->
+  <servlet>
+    <description></description>
+    <display-name>LogviewServlet</display-name>
+    <servlet-name>LogviewServlet</servlet-name>
+    <servlet-class>com.farm.wda.web.servlet.LogViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogviewServlet</servlet-name>
+    <url-pattern>/log.do</url-pattern>
+  </servlet-mapping>
+</web-app>

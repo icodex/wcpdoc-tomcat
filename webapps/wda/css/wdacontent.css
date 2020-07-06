@@ -1,0 +1,27 @@
+body {
+	background-color: gray;
+}
+
+.wdahtmlbox {
+	margin: auto;
+	padding: 16px;
+	max-width: 800px;
+	background-color: white;
+}
+.wdahtmlbox img{
+	max-width: 100%;
+}
+.wdaTitleBox{
+	
+}
+.wdaTitleBox img{
+	width: 64px;
+}
+.wdahtmlbox {
+	color: #535353;
+	line-height: 28px;
+}
+.wdahtmlbox a{
+	font-weight:bold;
+	color: #1c1c1c;
+}

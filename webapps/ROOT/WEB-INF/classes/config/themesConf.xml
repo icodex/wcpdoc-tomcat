@@ -1,0 +1,256 @@
+<?xml version="1.0"  encoding="utf-8" standalone="yes" ?>
+<conf>
+	<!--1.自定义配置： 当前使用的样式，填themes的id；设置为NONE则不加载个性化样式，沿用版本样式或基础样式 : alwaysLoad，如果為true就每次取值都加載xml，如果為false就只在啟動時加載 -->
+	<!-- ++++++++++++++++++++++++++++++++++++++<<<PC自定义配置>>>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<currentThemes alwaysLoad="true">
+		<pc>style-succinct</pc>
+		<mobile>version-mobile</mobile>
+	</currentThemes>
+	<themes id="style-succinct">
+		<!-- 简洁风格主题 -->
+		<page id="home-indexPage">web-succinct/home/succinct-index</page>
+		<!--分类知识列表页面 -->
+		<page id="type-knowlist">web-succinct/knowtype/succinct-index</page> 
+		<!--分类问答列表页面 -->
+		<page id="type-questionslist">web-succinct/fqatype/succinct-index</page>
+	</themes>
+	<themes id="classic-standard">
+		<!-- 三益定制检索 -->
+		<page id="search-pro">web-simple/lucene/searchProSanyi</page>
+	</themes>
+	<!-- ++++++++++++++++++++++++++++++++++++++<<<移动端自定义配置>>>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<themes id="version-mobile">
+		<!-- 移动端配置 -->
+		<page id="error-sys">web-mobile/error</page>
+		<page id="home-indexPage">web-mobile/index</page>
+		<page id="docKnow-viewPage">web-mobile/know/view</page>
+		<page id="fileKnow-viewPage">web-mobile/file/view</page>
+		<page id="urlKnow-viewPage">web-mobile/resource/view</page>
+		<page id="type-knowlist">web-mobile/know/list</page>
+		<!--分类问答浏览页面 -->
+		<page id="type-questionslist">web-mobile/questions/list</page>
+		<!--问答浏览页面 -->
+		<page id="questions-viewPage">web-mobile/questions/view</page>
+		<!--检索结果页面 -->
+		<page id="search-resultPage">web-mobile/search/result</page>
+		<!--附件查看页面 -->
+		<page id="file-viewPage">web-mobile/file/fileView</page>
+		<!--检索页面 -->
+		<page id="search-homePage">web-mobile/search/result</page>
+		<!-- 文档知识创建页面 -->
+		<page id="resourceUrl-creatPage">web-simple/resourceUrl/creatMini</page>
+	</themes>
+	<!-- -->
+	<!-- -->
+	<!--2.系统固定配置 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<!-- -->
+	<!-- -->
+	<!-- <<<PC标准版>>> -->
+	<themes id="version-sta">
+		<!-- 标准版空则使用默认配置 -->
+	</themes>
+	<!-- <<<PC专业版>>> -->
+	<themes id="version-pro">
+		<!-- 专业版空则使用默认配置 -->
+	</themes>
+	<!-- <<<PC旗舰版>>> -->
+	<themes id="version-ult">
+		<!-- 站点首页 -->
+		<page id="home-indexPage">web-wide/index</page>
+	</themes>
+	<!-- <<<默认>>> -->
+	<!-- 默认配置，最终将被覆盖，如果没有被覆盖则使用该配置 -->
+	<baseThemes>
+		<!-- 默认配置，其他样式将覆盖该配置 -->
+		<!-- 错误页面 -->
+		<page id="error-sys">web-simple/error</page>
+		<!-- 系统首页 -->
+		<page id="home-indexPage">web-simple/index</page>
+		<!-- 专题栏目页 -->
+		<page id="home-special">web-wide/special/home</page>
+		<!-- 专题具体信息页面 -->
+		<page id="info-special">web-wide/special/special</page>
+		<!-- 专题的修改首页 -->
+		<page id="editHome-special">web-wide/special/editHome</page>
+		<!-- 专题的维护知识列表 -->
+		<page id="editDocs-special">web-wide/special/editDocs</page>
+		<!-- 高级搜索页 <page id="search-pro">web-simple/lucene/searchPro</page> -->
+		<page id="search-pro">web-simple/lucene/searchProSanyi</page>
+		<!-- 文档知识浏览页面 -->
+		<page id="docKnow-viewPage">web-simple/know/view</page>
+		<!-- 资源知识浏览页面 -->
+		<page id="fileKnow-viewPage">web-simple/webfile/webfile</page>
+		<!-- 资源URL浏览页面 -->
+		<page id="urlKnow-viewPage">web-simple/resourceUrl/view</page>
+		<!--分类知识列表页面 -->
+		<page id="type-knowlist">web-simple/type/type</page>
+		<!--分类问答列表页面 -->
+		<page id="type-questionslist">web-simple/question/index</page>
+		<!--问答浏览页面 -->
+		<page id="questions-viewPage">web-simple/question/view</page>
+		<!--检索结果页面 -->
+		<page id="search-resultPage">web-simple/lucene/searchResult</page>
+		<!--检索页面 -->
+		<page id="search-homePage">web-simple/lucene/search</page>
+		<!--附件查看页面 -->
+		<page id="file-viewPage">web-simple/webfile/file</page>
+		<!-- 文档知识创建页面 -->
+		<page id="resourceUrl-creatPage">web-simple/resourceUrl/creat</page>
+	</baseThemes>
+	<mobileAgents>
+		<agentKey>iphone</agentKey>
+		<agentKey>ipad</agentKey>
+		<agentKey>android</agentKey>
+		<agentKey>phone</agentKey>
+		<agentKey>mobile</agentKey>
+		<agentKey>wap</agentKey>
+		<agentKey>netfront</agentKey>
+		<agentKey>java</agentKey>
+		<agentKey>opera mobi</agentKey>
+		<agentKey>opera mini</agentKey>
+		<agentKey>ucweb</agentKey>
+		<agentKey>windows ce</agentKey>
+		<agentKey>symbian</agentKey>
+		<agentKey>series</agentKey>
+		<agentKey>webos</agentKey>
+		<agentKey>sony</agentKey>
+		<agentKey>blackberry</agentKey>
+		<agentKey>dopod</agentKey>
+		<agentKey>nokia</agentKey>
+		<agentKey>samsung</agentKey>
+		<agentKey>palmsource</agentKey>
+		<agentKey>xda</agentKey>
+		<agentKey>pieplus</agentKey>
+		<agentKey>meizu</agentKey>
+		<agentKey>midp</agentKey>
+		<agentKey>cldc</agentKey>
+		<agentKey>motorola</agentKey>
+		<agentKey>foma</agentKey>
+		<agentKey>docomo</agentKey>
+		<agentKey>up.browser</agentKey>
+		<agentKey>up.link</agentKey>
+		<agentKey>blazer</agentKey>
+		<agentKey>helio</agentKey>
+		<agentKey>hosin</agentKey>
+		<agentKey>huawei</agentKey>
+		<agentKey>novarra</agentKey>
+		<agentKey>coolpad</agentKey>
+		<agentKey>webos</agentKey>
+		<agentKey>techfaith</agentKey>
+		<agentKey>palmsource</agentKey>
+		<agentKey>alcatel</agentKey>
+		<agentKey>amoi</agentKey>
+		<agentKey>ktouch</agentKey>
+		<agentKey>nexian</agentKey>
+		<agentKey>ericsson</agentKey>
+		<agentKey>philips</agentKey>
+		<agentKey>sagem</agentKey>
+		<agentKey>wellcom</agentKey>
+		<agentKey>bunjalloo</agentKey>
+		<agentKey>maui</agentKey>
+		<agentKey>smartphone</agentKey>
+		<agentKey>iemobile</agentKey>
+		<agentKey>spice</agentKey>
+		<agentKey>bird</agentKey>
+		<agentKey>zte-</agentKey>
+		<agentKey>longcos</agentKey>
+		<agentKey>pantech</agentKey>
+		<agentKey>gionee</agentKey>
+		<agentKey>portalmmm</agentKey>
+		<agentKey>jig browser</agentKey>
+		<agentKey>hiptop</agentKey>
+		<agentKey>benq</agentKey>
+		<agentKey>haier</agentKey>
+		<agentKey>^lct</agentKey>
+		<agentKey>320x320</agentKey>
+		<agentKey>240x320</agentKey>
+		<agentKey>176x220</agentKey>
+		<agentKey>w3c </agentKey>
+		<agentKey>acs-</agentKey>
+		<agentKey>alav</agentKey>
+		<agentKey>alca</agentKey>
+		<agentKey>amoi</agentKey>
+		<agentKey>audi</agentKey>
+		<agentKey>avan</agentKey>
+		<agentKey>benq</agentKey>
+		<agentKey>bird</agentKey>
+		<agentKey>blac</agentKey>
+		<agentKey>blaz</agentKey>
+		<agentKey>brew</agentKey>
+		<agentKey>cell</agentKey>
+		<agentKey>cldc</agentKey>
+		<agentKey>cmd-</agentKey>
+		<agentKey>dang</agentKey>
+		<agentKey>doco</agentKey>
+		<agentKey>eric</agentKey>
+		<agentKey>hipt</agentKey>
+		<agentKey>inno</agentKey>
+		<agentKey>ipaq</agentKey>
+		<agentKey>java</agentKey>
+		<agentKey>jigs</agentKey>
+		<agentKey>kddi</agentKey>
+		<agentKey>keji</agentKey>
+		<agentKey>leno</agentKey>
+		<agentKey>lg-c</agentKey>
+		<agentKey>lg-d</agentKey>
+		<agentKey>lg-g</agentKey>
+		<agentKey>lge-</agentKey>
+		<agentKey>maui</agentKey>
+		<agentKey>maxo</agentKey>
+		<agentKey>midp</agentKey>
+		<agentKey>mits</agentKey>
+		<agentKey>mmef</agentKey>
+		<agentKey>mobi</agentKey>
+		<agentKey>mot-</agentKey>
+		<agentKey>moto</agentKey>
+		<agentKey>mwbp</agentKey>
+		<agentKey>nec-</agentKey>
+		<agentKey>newt</agentKey>
+		<agentKey>noki</agentKey>
+		<agentKey>oper</agentKey>
+		<agentKey>palm</agentKey>
+		<agentKey>pana</agentKey>
+		<agentKey>pant</agentKey>
+		<agentKey>phil</agentKey>
+		<agentKey>play</agentKey>
+		<agentKey>port</agentKey>
+		<agentKey>prox</agentKey>
+		<agentKey>qwap</agentKey>
+		<agentKey>sage</agentKey>
+		<agentKey>sams</agentKey>
+		<agentKey>sany</agentKey>
+		<agentKey>sch-</agentKey>
+		<agentKey>sec-</agentKey>
+		<agentKey>send</agentKey>
+		<agentKey>seri</agentKey>
+		<agentKey>sgh-</agentKey>
+		<agentKey>shar</agentKey>
+		<agentKey>sie-</agentKey>
+		<agentKey>siem</agentKey>
+		<agentKey>smal</agentKey>
+		<agentKey>smar</agentKey>
+		<agentKey>sony</agentKey>
+		<agentKey>sph-</agentKey>
+		<agentKey>symb</agentKey>
+		<agentKey>t-mo</agentKey>
+		<agentKey>teli</agentKey>
+		<agentKey>tim-</agentKey>
+		<!-- <agentKey>tosh</agentKey> -->
+		<agentKey>tsm-</agentKey>
+		<agentKey>upg1</agentKey>
+		<agentKey>upsi</agentKey>
+		<agentKey>vk-v</agentKey>
+		<agentKey>voda</agentKey>
+		<agentKey>wap-</agentKey>
+		<agentKey>wapa</agentKey>
+		<agentKey>wapi</agentKey>
+		<agentKey>wapp</agentKey>
+		<agentKey>wapr</agentKey>
+		<agentKey>webc</agentKey>
+		<agentKey>winw</agentKey>
+		<agentKey>winw</agentKey>
+		<agentKey>xda</agentKey>
+		<agentKey>xda-</agentKey>
+		<agentKey>Googlebot-Mobile</agentKey>
+	</mobileAgents>
+</conf>

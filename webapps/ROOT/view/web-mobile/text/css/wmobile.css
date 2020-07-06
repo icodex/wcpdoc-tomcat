@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+body {
+	font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
+	font-size: 14px;
+	color: #666;
+}
+
+hr {
+	border: solid 1px #dddddd;
+	border-bottom: solid 0px #ffffff;
+	margin: 0px;
+}
+
+pre {
+	background-color: #000000;
+	padding: 4px;
+	color: #ffffff;
+}
+
+a {
+	cursor: pointer;
+}
+
+.wcp-icon {
+	height: 1.5em;
+	margin-top: 0em;
+}
+
+.wcp-top-clear {
+	padding-top: 4px;
+	margin-top: 0px;
+}
+
+.wcp-bottom-clear {
+	margin-bottom: 4px;
+	padding-bottom: 0px;
+}
+/**导航栏的css**/
+.wcp-head-mark {
+	color: #ffffff;
+}
+
+.wcp-head-img {
+	float: left;
+}
+
+.wcp-head-mark img {
+	height: 1.5em;
+	margin-top: -0.6em;
+}
+
+.wcp-head-title {
+	display: block;
+	margin-top: 6px;
+	float: left;
+	margin-left: 8px;
+	color: #ffffff;
+}
+
+.wcp-head {
+	background-color: #323232;
+}
+
+.wcp-head a {
+	color: #ffffff;
+}
+
+.bar .button-link {
+	color: #ffffff;
+}
+
+.wcp-menubar-item img {
+	width: 24px;
+	height: 24px;
+	display: block;
+	margin: auto;
+	margin-top: 8px;
+	margin-bottom: -4px;
+}
+
+.wcp-menubar-item .tab-label {
+	font-size: 12px;
+	color: #8a8a8a;
+}
+
+.wcp-menubar-item .active {
+	font-size: 12px;
+	color: #2c2c2c;
+	font-weight: bold;
+}
+/**知识卡片标题的css**/
+.wcp-card-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/**知识文章**/
+.wcp-content {
+	background-color: #ffffff;
+}
+
+.wcp-content p {
+	margin: 4px;
+	padding: 4px;
+}
+
+.wcp-content .wcp-title {
+	font-size: 22px;
+	color: #333333;
+}
+
+.wcp-content .wcp-date {
+	color: #999;
+	font-size: 14px;
+}
+
+.wcp-content .wcp-text {
+	box-sizing: border-box;
+	color: #666;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 2em;
+	text-align: justify;
+	word-break: break-all;
+	margin-top: 2em;
+}
+
+.wcp-text img {
+	max-width: 100%;
+}
+
+.wcp-text video{
+	background-color: #000000;
+}
+
+.wcp-img-content {
+	text-align: center;
+	margin: 4px;
+}
+
+.wcp-img-content img {
+	margin: auto;
+}
+/**分类**/
+.wcp-type-tip {
+	color: #D9534F;
+	font-size: 0.8em;
+}
+
+.wcp-type-title a {
+	color: #11659a;
+	font-size: 1.2em;
+}
+
+.wcp-type-sub a {
+	white-space: nowrap;
+}
+
+.wcp-auther-img img {
+	width: 2em;
+	height: 2em;
+}
+
+.wcp-auther-name {
+	font-size: 0.8em;
+}
+
+.card-content-inner {
+	word-break: break-all;
+}
+/**评论**/
+.wcp-message-author {
+	color: #727272;
+	font-size: 0.9em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.wcp-message-text {
+	color: #3e3e3e;
+	font-size: 1.1em;
+}
+
+.wcp-message-time {
+	color: #bdbdbd;
+	font-size: 0.8em;
+}
+
+.wcp-message-form {
+	margin-top: 0px;
+}
+
+.wcp-message-form .item-content {
+	border: solid 1px #ddd;
+}
+
+.wcp-message-input {
+	padding: 8px;
+}
+
+.wcp-message-input textarea {
+	height: 4em;
+}
+
+.wcp-message-button {
+	padding: 4px;
+	margin-left: 24px;
+	margin-right: 24px;
+}
+/**评论-结束**/
+/**表格滚动条-开始**/
+.table-responsive {
+	overflow-x: auto;
+}
+.table {
+	min-width: 500px;
+}
+/**表格滚动条-结束**/
+
+/**知识内附件框-开始**/
+.ke-wcp-file{
+	text-align: center;
+}
+.ke-wcp-file img{
+	max-height: 64px;
+}
+/**知识内附件框-结束**/

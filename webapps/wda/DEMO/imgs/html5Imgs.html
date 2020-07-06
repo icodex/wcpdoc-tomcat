@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<title>图片预览</title>
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
+<link rel="stylesheet" type="text/css" href="/wda/css/bootstrap.min.css" />
+<script type="text/javascript" src="/wda/js/jquery11.3.js"></script>
+<script type="text/javascript" src="/wda/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #8a8a8a;">
+	<nav class="navbar navbar-default  navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header hidden-xs hidden-sm">
+				<a class="navbar-brand" style="max-width: 100px;">
+					<img alt="Brand" width="52" height="52" style="margin-top: -16px;" src="/wda/img/htmllogo.png" />
+				</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class=" text-center">
+				<div class="btn-group " role="group" aria-label="..." style="margin-top: 8px;">
+					<button type="button" class="btn btn-default" onclick="gotoPage(currentnum-1)">
+						<i class="glyphicon glyphicon-chevron-left"></i>
+						上一页
+					</button>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							当前第
+							<span id="currentNumSpan"></span>
+							页
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" id="allPageChooseUl" style="max-height: 300px; overflow: auto;">
+						</ul>
+					</div>
+					<button type="button" class="btn btn-default" onclick="gotoPage(currentnum+1)">
+						下一页
+						<i class="glyphicon glyphicon-chevron-right"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="container" style="margin-top: 50px; margin-bottom: 10px;">
+		<div class="row">
+			<div class="col-md-12" id="imgsBoxDiv"></div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var imgnum = 10;
+	var currentnum = 1;
+	$(function() {
+		$('#currentNumSpan').text(currentnum);
+		for (var i = imgnum, n = 0; i > 0; i--, n++) {
+			$('#allPageChooseUl').append(
+					'<li><a href="javascript:gotoPage(' + (n + 1) + ')">第'
+							+ (n + 1) + '页</a></li>');
+			var imgHtml = '<img id="imgid'
+					+ (n + 1)
+					+ '" alt="" src="/wda/img/loading.png" lazysrc="img'
+					+ n
+					+ '.png" style="max-width: 100%;margin-top: 8px;display: none;">';
+			$('#imgsBoxDiv').append(imgHtml);
+		}
+		gotoPage(1);
+
+	});
+	function gotoPage(page) {
+		if (page <= 0) {
+			page = 1;
+		}
+		if (page >= imgnum) {
+			page = imgnum;
+		}
+		currentnum = page;
+		$('#currentNumSpan').text(page);
+		for (var i = imgnum, n = 0; i > 0; i--, n++) {
+			if (currentnum == (n + 1)) {
+				if ($('#imgid' + (n + 1)).attr('src').indexOf('loading.png') >= 0) {
+					$('#imgid' + (n + 1)).attr('src',
+							$('#imgid' + (n + 1)).attr('lazysrc'));
+				}
+				$('#imgid' + (n + 1)).show();
+			} else {
+				$('#imgid' + (n + 1)).hide();
+			}
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+body {
+	font: 14px/1.5 "PingFang SC", "Lantinghei SC", "Microsoft YaHei",
+		"HanHei SC", "Helvetica Neue", "Open Sans", Arial, "Hiragino Sans GB",
+		"微软雅黑", STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+
+.containerbox {
+	background: #f4f4f4;
+	background-repeat: no-repeat;
+}
+/**页眉**/
+.super_content {
+	margin-top: 50px;
+	text-align: center;
+	background-color: #fff;
+	padding: 8px;
+	border-top: 1px solid #CCC;
+}
+/**页脚**/
+.super_contentfoot {
+	margin-top: 50px;
+	text-align: center;
+	background-color: #1e1e1e;
+	padding: 8px;
+	border-bottom: 1px solid #292929;
+	border-top: 1px solid #585858;
+}
+
+.foot {
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #111111;
+	padding: 8px;
+}
+
+.containerbox {
+	background-color: #f4f4f4;
+	border-top: 1px solid #eeeeee;
+	padding-bottom: 50px;
+	padding-top: 20px;
+}
+
+.wcp-su-out-box {
+	background-color: #ffffff;
+	border-radius: 4px;
+	color: #4d5356;
+	margin-bottom: 20px;
+}
+
+.wcp-su-out-box .unit {
+	padding: 20px;
+	border-bottom: 1px solid #eee;
+	border-right: 2px solid #fff;
+}
+
+.wcp-su-out-box .unit-min {
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 14px;
+	line-height: 1.8em;
+	border-right: 2px solid #fff;
+}
+
+.wcp-su-out-box .link:HOVER {
+	border-right: 2px solid #D9534F;
+}
+
+.wcp-su-out-box .link a {
+	color: #4d5356;
+}
+
+.wcp-su-out-box .link a b {
+	font-weight: 300;
+	margin-left: 4px;
+}
+
+.wcp-su-out-box .link:HOVER a {
+	color: #D9534F;
+}
+
+.wcp-su-out-box .title {
+	color: #D9534F;
+	font-size: 16px;
+}
+
+.wcp-su-out-box .title .more-link {
+	float: right;
+}
+
+.wcp-su-out-box .title i {
+	margin-top: -5px;
+}
+
+.wcp-su-one-line {
+	overflow: hidden; /*超出部分隐藏*/
+	text-overflow: ellipsis; /* 超出部分显示省略号 */
+	white-space: nowrap; /*规定段落中的文本不进行换行 */
+}
+
+.wcp-su-one-line {
+	color: #aaaaaa;
+}
+.navbar-inverse .navbar-nav>li>a {
+	color: #e6e6e6;
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib
+    PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+    "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>在线预览功能标签库</short-name>
+	<uri>/hellotag</uri>
+	<tag><!-- 用户拥有修改权限则显示标签内的内容 -->
+		<name>WdaFileViewUrl</name>
+		<tag-class>com.farm.wda.tag.WdaFileViewUrl</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>fileid</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+		<attribute>
+			<name>docid</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 预览文件日志地址 -->
+		<name>WdaLogViewUrl</name>
+		<tag-class>com.farm.wda.tag.WdaLogViewUrl</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>fileid</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 文件可以预览则显示标签内的内容(1支持该文件类型，2该文件生成预览文件过程中或生成预览文件成功) -->
+		<name>IsSupport</name>
+		<tag-class>com.farm.wda.tag.IsSupport</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>fileid</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 文件不可以预览则显示标签内的内容 -->
+		<name>IsNotSupport</name>
+		<tag-class>com.farm.wda.tag.IsNotSupport</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>fileid</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 文件转换出错显示 -->
+		<name>IsConverterError</name>
+		<tag-class>com.farm.wda.tag.IsConverterError</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>fileid</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 文件转换未出错显示 -->
+		<name>IsNotConverterError</name>
+		<tag-class>com.farm.wda.tag.IsNotConverterError</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>fileid</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 预览回调方法 -->
+		<name>WdaViewHandle</name>
+		<tag-class>com.farm.wda.tag.WdaFileViewHandle</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>fileid</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+</taglib>
+

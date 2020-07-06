@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>FlexPaper AdaptiveUI Debug Page</title>
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" />
+<link rel="stylesheet" type="text/css" href="/wda/lib/flexpaper/css/flexpaper.css" />
+<script type="text/javascript" src="/wda/lib/flexpaper/js/jquery.min.js"></script>
+<script type="text/javascript" src="/wda/lib/flexpaper/js/flexpaper.js"></script>
+<script type="text/javascript" src="/wda/lib/flexpaper/js/flexpaper_handlers_debug.js"></script>
+</head>
+<body>
+	<div id="documentViewer" class="flexpaper_viewer"
+		style="position: absolute;  width: 100%; height: 100%"></div>
+	<script type="text/javascript">
+		var startDocument = "Paper";
+		$('#documentViewer').FlexPaperViewer({
+			config : {
+				SWFFile : 'docs/Paper.pdf.swf',
+				Scale : 0.6,
+				ZoomTransition : 'easeOut',
+				ZoomTime : 0.5,
+				ZoomInterval : 0.2,
+				FitPageOnLoad : true,
+				FitWidthOnLoad : false,
+				FullScreenAsMaxWindow : false,
+				ProgressiveLoading : false,
+				MinZoomSize : 0.2,
+				MaxZoomSize : 5,
+				SearchMatchAll : false,
+				RenderingOrder : 'flash',
+				ViewModeToolsVisible : true,
+				ZoomToolsVisible : true,
+				NavToolsVisible : true,
+				CursorToolsVisible : true,
+				SearchToolsVisible : true,
+				WMode : 'window',
+				localeChain : 'en_US'
+			}
+		});
+	</script>
+</body>
+</html>

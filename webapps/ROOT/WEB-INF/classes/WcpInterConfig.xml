@@ -1,0 +1,95 @@
+<?xml version="1.0"  encoding="utf-8" standalone="yes" ?>
+<conf>
+	<group describe="本地服務器" name="localserver">
+		<parameter name="config.local.http.port">
+			<val>8080</val>
+			<describe>本地http端口</describe>
+		</parameter>
+		<parameter name="config.local.http.ip">
+			<val>127.0.0.1</val>
+			<describe>本地IP</describe>
+		</parameter>
+	</group>
+	<!-- restful接口 -->
+	<group describe="restful接口" name="restful">
+		<parameter name="config.restful.state">
+			<val>true</val>
+			<describe>是否启用restful接口</describe>
+		</parameter>
+		<parameter name="config.restful.secret.type">
+			<val>complex</val>
+			<describe>权限校验模式complex[使用安全码的同时必须带入操作人信息]|simple[简单模式直接使用安全码访问]|none[不校验验证码，只校验ip白名单]
+			</describe>
+		</parameter>
+		<parameter name="config.restful.whitelist.ips">
+			<val>127.0.0.1</val>
+			<describe>允许访问的白名单，多个ip间用逗号分隔</describe>
+		</parameter>
+		<parameter name="config.restful.debug">
+			<val>false</val>
+			<describe>是否启用接口调试模式</describe>
+		</parameter>
+		<parameter name="config.restful.secret.key">
+			<val>FC7E18DA4DCA06FFB087AD65591D49B0</val>
+			<describe>系统通用的接口密码</describe>
+		</parameter>
+	</group>
+	<!-- WDA|WDAP接口 -->
+	<group describe="文件预览" name="fileView">
+		<parameter name="config.fileview.state">
+			<val>true</val>
+			<describe>是否启用WDA预览功能</describe>
+		</parameter>
+		<parameter name="config.fileview.type">
+			<val>WDA</val>
+			<describe>文件预览实现类型WDA|WDAP</describe>
+		</parameter>
+		<group describe="WDAP接口" name="wdap">
+			<parameter name="config.wdap.ologinname">
+				<val>sysadmin</val>
+				<describe>操作人员登陆名</describe>
+			</parameter>
+			<parameter name="config.wdap.opassword">
+				<val>111111</val>
+				<describe>操作人员密码</describe>
+			</parameter>
+			<parameter name="config.wdap.secret">
+				<val>F5910</val>
+				<describe>wdap访问密钥</describe>
+			</parameter>
+			<parameter name="config.wdap.base.url">
+				<val>http://LOCAL_HTTP_IP:LOCAL_HTTP_PORT/wdap</val>
+			<describe>restful地址（写绝对路径）[http://127.0.0.1:8080/ekca]或者[LOCAL_IP:LOCAL_PORT/ekca]表示同一容器中</describe>
+			</parameter>
+		</group>
+		<group describe="WDA接口" name="wda">
+			<parameter name="config.wda.rmi.url">
+				<val>rmi://127.0.0.1:8888/wda</val>
+				<describe>WDA的rmi地址</describe>
+			</parameter>
+			<parameter name="config.wda.view.url">
+				<val>/wda/view.do?key=PARA_KEY</val>
+				<describe>文件预览地址</describe>
+			</parameter>
+			<parameter name="config.wda.log.url">
+				<val>/wda/log.do?key=PARA_KEY</val>
+				<describe>日志查看地址</describe>
+			</parameter>
+		</group>
+	</group>
+	<!-- 对外RMI接口 -->
+	<group describe="对外RMI接口" name="rmi">
+		<parameter name="config.local.rmi.state">
+			<val>true</val>
+			<describe>是否启用rmi接口</describe>
+		</parameter>
+		<parameter name="config.local.rmi.port">
+			<val>8701</val>
+			<describe>对外RMI端口</describe>
+		</parameter>
+		<parameter name="config.local.rmi.secret.key">
+			<val>F59BD681D4DCA06C49105F7EDAFB087A</val>
+			<describe>对外RMI接口密码</describe>
+		</parameter>
+	</group>
+</conf>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib
+    PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+    "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>文档功能标签</short-name>
+	<uri>/hellotag</uri>
+	<tag><!-- 截取字符串,超长则省略号代替 -->
+		<name>Describe</name>
+		<tag-class>com.farm.doc.tag.DocDescribe</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>text</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+		<attribute>
+			<name>maxnum</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 默认首页 -->
+		<name>defaultIndexPage</name>
+		<tag-class>com.farm.doc.tag.DefaultIndexPageTaget</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+	<tag><!-- 用户拥有修改权限则显示标签内的内容 -->
+		<name>canWriteIsShow</name>
+		<tag-class>com.farm.doc.tag.IsWriteShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!--初始化多媒体标签 -->
+		<name>InitHtmlContentTag</name>
+		<tag-class>com.farm.doc.tag.InitHtmlContentTag</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>html</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+		<attribute>
+			<name>isImgLazy</name><!-- 是否延迟加载图片：true/false -->
+			<required>false</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+		<attribute>
+			<name>isFormatHtml</name><!-- 是否格式化html：true/false -->
+			<required>false</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+		<attribute>
+			<name>isOnlyBodyTag</name><!-- 是否格式化html：true/false -->
+			<required>false</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+		<attribute>
+			<name>isResponsiveTable</name><!--是否启用bootstrap响应式表格html：true/false -->
+			<required>false</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户不拥有修改权限则显示标签内的内容 -->
+		<name>canNoWriteIsShow</name>
+		<tag-class>com.farm.doc.tag.NoWriteIsShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户拥有删除权限则显示标签内的内容 -->
+		<name>canDelIsShow</name>
+		<tag-class>com.farm.doc.tag.IsDelShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户拥有删除权限则显示标签内的内容 -->
+		<name>canAuditIsShow</name>
+		<tag-class>com.farm.doc.tag.IsAuditShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户不拥有删除权限则显示标签内的内容 -->
+		<name>canNoDelIsShow</name>
+		<tag-class>com.farm.doc.tag.NoDelIsShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户拥有阅读权限则显示标签内的内容 -->
+		<name>canReadsShow</name>
+		<tag-class>com.farm.doc.tag.IsReadShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户不拥有阅读权限则显示标签内的内容 -->
+		<name>canNoReadsShow</name>
+		<tag-class>com.farm.doc.tag.NoReadIsShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户拥有预览权限则显示标签内的内容 -->
+		<name>canViewShow</name>
+		<tag-class>com.farm.doc.tag.IsViewShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户不拥有预览权限则显示标签内的内容 -->
+		<name>canNoViewShow</name>
+		<tag-class>com.farm.doc.tag.NoViewIsShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户拥有下载权限则显示标签内的内容 -->
+		<name>canDownloadShow</name>
+		<tag-class>com.farm.doc.tag.IsDownloadShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户不拥有下载权限则显示标签内的内容 -->
+		<name>canNoDownloadShow</name>
+		<tag-class>com.farm.doc.tag.NoDownloadIsShowForUser</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>docId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 用户小组Option项(只加载用户享有编辑权限的小组) -->
+		<name>docGroupOption</name>
+		<tag-class>com.farm.doc.tag.DocGroupOption</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>aroundS</name><!-- 字段索引名 -->
+			<required>false</required><!-- 是否必填 -->
+			<rtexprvalue>false</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+		<attribute>
+			<name>aroundE</name><!-- 字段索引名 -->
+			<required>false</required><!-- 是否必填 -->
+			<rtexprvalue>false</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 显示文档内容 -->
+		<name>docContent</name>
+		<tag-class>com.farm.doc.tag.DocContent</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>id</name><!-- 字段索引名 -->
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 显示图片URL -->
+		<name>ImgUrl</name>
+		<tag-class>com.farm.doc.tag.ImgUrl</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>fileid</name><!-- 字段索引名 -->
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+		<attribute>
+			<name>isPhoto</name><!-- 是否是照片 -->
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>false</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+		<attribute>
+			<name>isMini</name><!-- 是否是小图 -->
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>false</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 显示附件下载URL -->
+		<name>FileUrl</name>
+		<tag-class>com.farm.doc.tag.FileUrl</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>fileid</name><!-- 字段索引名 -->
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag>
+		<name>WebUrls</name>
+		<tag-class>com.farm.doc.tag.WebUrls</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>type</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag><!-- 如果html或html2中含有知识图标的标签则显示（.ke-wcp-graph） -->
+		<name>IsHaveRelationGraph</name>
+		<tag-class>com.farm.doc.tag.IsHaveRelationGraph</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>html</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+		<attribute>
+			<name>html2</name>
+			<required>false</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+	<tag><!-- 分类管理员显示标签内的内容 -->
+		<name>isTypeManager</name>
+		<tag-class>com.farm.doc.tag.IsTypeManager</tag-class>
+		<body-content>jsp</body-content>
+		<attribute>
+			<name>typeId</name>
+			<required>true</required><!-- 是否必填 -->
+			<rtexprvalue>true</rtexprvalue><!-- 是否能够以${}方式传值 -->
+		</attribute>
+	</tag>
+</taglib>

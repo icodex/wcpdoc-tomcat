@@ -1,0 +1,163 @@
+<conf>
+	<files><!-- 被转换后的生成格式 -->
+		<file><!-- 目标文件格式定义 exname为原文件的扩展名大写 filename为生成的目标文件 path为相对路径 -->
+			<exname>TXT</exname>
+			<preview>false</preview><!-- 该格式是否可以被预览 -->
+			<icon>txt</icon>
+			<filename path="txt">text.txt</filename>
+		</file>
+		<file>
+			<exname>HTML</exname>
+			<preview>true</preview>
+			<icon>html</icon>
+			<filename path="html">index.html</filename>
+		</file>
+		<file>
+			<exname>PDF</exname>
+			<preview>true</preview>
+			<icon>pdf</icon>
+			<filename path="pdf">file.pdf</filename>
+		</file>
+		<file>
+			<exname>FLV</exname>
+			<preview>true</preview>
+			<icon>flv</icon>
+			<filename path="flv">data.flv</filename>
+		</file>
+		<file>
+			<exname>IMGS</exname>
+			<preview>true</preview>
+			<icon>img</icon>
+			<filename path="imgs">index.html</filename>
+		</file>
+		<file>
+			<exname>SWF</exname>
+			<preview>true</preview>
+			<icon>html</icon>
+			<filename path="swf">index.html</filename>
+		</file>
+		<file>
+			<exname>VIDEO</exname>
+			<preview>true</preview>
+			<icon>mms</icon>
+			<filename path="video">index.html</filename>
+		</file>
+		<file>
+			<exname>AUDIO</exname>
+			<preview>true</preview>
+			<icon>mms</icon>
+			<filename path="audio">index.html</filename>
+		</file>
+	</files>
+	<types><!-- <type> <name>rar</name> <target> <exname impl="com.farm.wda.adaptor.impl.ZipRarToHtmlConvertor">HTML</exname> 
+			</target> </type> <type> <name>zip</name> <target> <exname impl="com.farm.wda.adaptor.impl.ZipRarToHtmlConvertor">HTML</exname> 
+			</target> </type> -->
+		<type>
+			<name>web</name>
+			<target>
+				<exname impl="com.farm.wda.adaptor.impl.WebSiteToHtmlConvertor">HTML</exname>
+			</target>
+		</type>
+		<type>
+			<name>doc</name>
+			<!-- 最大允许转换的文档为200m -->
+			<maxsize>209715200</maxsize>
+			<target>
+				<!-- <exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">TXT</exname> -->
+				<exname impl="com.farm.wda.adaptor.impl.DocToHtmlConvertor">HTML</exname>
+				<!-- <exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">PDF</exname> -->
+			</target>
+		</type>
+		<type>
+			<name>txt</name>
+			<target>
+				<!--<exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">PDF</exname> -->
+				<!--<exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">HTML</exname> -->
+				<exname impl="com.farm.wda.adaptor.impl.TxtToHtmlConvertor">HTML</exname>
+			</target>
+		</type>
+		<type>
+			<name>docx</name>
+			<!-- 最大允许转换的文档为200m -->
+			<maxsize>209715200</maxsize>
+			<target>
+				<!-- <exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">TXT</exname> -->
+				<exname impl="com.farm.wda.adaptor.impl.DocToHtmlConvertor">HTML</exname>
+				<!-- <exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">PDF</exname> -->
+			</target>
+		</type>
+		<type>
+			<name>xls</name>
+			<!-- 最大允许转换的文档为200m -->
+			<maxsize>209715200</maxsize>
+			<target>
+				<exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">HTML</exname>
+				<!-- <exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">PDF</exname> -->
+			</target>
+		</type>
+		<type>
+			<name>xlsx</name>
+			<!-- 最大允许转换的文档为200m -->
+			<maxsize>209715200</maxsize>
+			<target>
+				<exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">HTML</exname>
+				<!-- <exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">PDF</exname> -->
+			</target>
+		</type>
+		<type>
+			<name>ppt</name>
+			<!-- 最大允许转换的文档为200m -->
+			<maxsize>209715200</maxsize>
+			<target>
+				<exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">PDF</exname>
+
+				<!--<exname sourceExname="PDF" impl="com.farm.wda.adaptor.impl.PdfToImgsConvertor">IMGS</exname> 
+					<exname impl="com.farm.wda.adaptor.impl.DocToHtmlConvertor">HTML</exname><exname 
+					impl="com.farm.wda.adaptor.impl.DocToHtmlConvertor">HTML</exname><exname 
+					impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">TXT</exname><exname 
+					impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">PDF</exname> -->
+			</target>
+		</type>
+		<type>
+			<name>pptx</name>
+			<!-- 最大允许转换的文档为200m -->
+			<maxsize>209715200</maxsize>
+			<target>
+				<exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">PDF</exname>
+				<!--<exname sourceExname="PDF" impl="com.farm.wda.adaptor.impl.PdfToImgsConvertor">IMGS</exname> 
+					<exname impl="com.farm.wda.adaptor.impl.DocToHtmlConvertor">HTML</exname><exname 
+					impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">TXT</exname> -->
+			</target>
+		</type>
+		<type>
+			<name>flv</name>
+			<target>
+				<!--<exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">TXT</exname> -->
+				<exname impl="com.farm.wda.adaptor.impl.FileCopyConvertor">FLV</exname>
+			</target>
+		</type>
+		<type>
+			<name>pdf</name>
+			<target>
+				<!--<exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">TXT</exname> 
+					<exname impl="com.farm.wda.adaptor.impl.PdfToImgsConvertor">IMGS</exname> -->
+				<exname impl="com.farm.wda.adaptor.impl.FileCopyConvertor">PDF</exname>
+				<!--<exname impl="com.farm.wda.adaptor.impl.PdfToSwfConvertor">SWF</exname> -->
+			</target>
+		</type>
+		<type>
+			<name>mp4</name>
+			<target>
+				<!--<exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">TXT</exname> -->
+				<exname impl="com.farm.wda.adaptor.impl.VideoToHtml5Convertor">VIDEO</exname>
+			</target>
+		</type>
+		<type>
+			<name>mp3</name>
+			<target>
+				<!--<exname impl="com.farm.wda.adaptor.impl.OpenOfficeConvertor">TXT</exname> -->
+				<exname impl="com.farm.wda.adaptor.impl.AudioToHtml5Convertor">AUDIO</exname>
+			</target>
+		</type>
+	</types>
+</conf>
